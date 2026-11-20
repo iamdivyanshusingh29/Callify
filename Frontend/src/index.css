@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .scolling-bar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scolling-bar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .animate-shake {
+    animation: shake 0.3s ease-in-out;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
